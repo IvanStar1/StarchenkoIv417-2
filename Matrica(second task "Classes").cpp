@@ -21,7 +21,7 @@ class matrix {
     matrix () {}
 
 void dinamic_matrix(int**& matrix1, int& row_size1, int& column_size1){
-    cout<<"Вас приветствует программа, специализирующая на произведении и делении матрицы на число!"<<endl;
+    cout<<"Вас приветствует программа, специализирующаяся на произведении и делении матрицы на число!"<<endl;
     this->matrix1=matrix1;
     this->row_size1=row_size1;
     this->column_size1=column_size1;
@@ -85,7 +85,7 @@ void decision(int**& matrix1, int**& matrix2, int& row_size1, int& column_size1,
     cout<<"Введите размер матрицы, равный размеру первой матрицы"<<endl;
     cin>>row_size2;
     cin>>column_size2;
-    cout<<"произведение"<<endl;
+    cout<<"Произведение"<<endl;
     matrix2=new int* [row_size2];
     for(int i=0;i<row_size2;i++){
         matrix2[i]=new int [column_size2];
@@ -95,15 +95,13 @@ void decision(int**& matrix1, int**& matrix2, int& row_size1, int& column_size1,
     }
 }
     
-    
 ~matrix () {};    
     
 };
 
-
 int main()
 {
-    setlocale(LC_ALL, "Russian");
+setlocale(LC_ALL, "Russian");
     cout<<"Реализация через классы"<<endl;
     int b;
     int row_size1;
@@ -121,10 +119,6 @@ int main()
     a.matrix_output(matrix2,row_size2, column_size2,matrix3,row_size3,column_size3);
     a.decision1(matrix1, matrix2,row_size1, column_size1,row_size2,column_size2, b,row_size3,column_size3,matrix3);
     a.matrix_output(matrix2,row_size2, column_size2,matrix3,row_size3,column_size3);
-    
-    
-
-
 system("pause");
 return 0 ;
 }
